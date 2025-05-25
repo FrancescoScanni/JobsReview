@@ -1,0 +1,278 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+
+.container{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    margin: 0;
+    width: 100vw;
+    height: 17vh;
+}
+.header_elements{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#f2f2f2;
+    padding: 0 10vh;
+}
+#logo{
+    width: 8vw;
+    height: 17vh;
+}
+a>img{
+    width: 3.5vw;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.hero1{
+    margin: 0;
+    margin-top: 10vh;
+    width: 100vw;
+    padding-left: 1.5vw;
+
+}
+.para1{
+    padding: 0 10px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-left: 2vw;
+    background-color: #f2f2f2;;
+    border-radius: 30px;
+    height: 57vh;
+    max-height:57vh ;
+}
+.para2{
+    padding: 30px;
+}
+#bias{
+    border-radius: 30px;
+    width: 30vw;
+}
+p{
+    font-size: 150%;
+}
+.desc{
+    font-size: 120%;
+}
+#title{
+    font-family: fantasy;
+    padding-top: 15px;
+    padding-bottom: 23px;
+    height: 17vh;
+}
+#findout{
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #693367;
+    color: white;
+    font-weight: bold;
+    border: solid 0px;
+}
+
+
+
+.hero2{
+    margin-top: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.us{
+    display: flex;
+    padding: 0;
+    justify-content: center;
+
+}
+.icona{
+    border-radius: 30px;
+    width: 18vw;
+    height: 46vh;
+    margin: 25px;
+}
+h2{
+    text-align: center;
+}
+.bro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.hero3{
+    width: 100vw;
+    margin-top: 10vh;
+    padding-left: 2vw;
+}
+#ai_uomo{
+    width: 63.5vw;
+    height: 50vh;
+    border-radius: 30px;
+}
+#dwld_excel{
+    margin-left: 15vw;
+    align-self: flex-end;
+    margin-top: 12.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12.5vw;
+    height: 7.5vh;
+    background-color: #693367;
+    border-radius: 30px;
+}
+#file{
+    text-decoration: none;
+    color: #f2f2f2;
+    font-weight: bold;
+}
+#logo_excel{
+    position: absolute;
+    margin-top: 10vh;
+    margin-left: 10vw;
+}
+
+
+
+
+.hero4{
+    margin-top: 7vh;
+    margin-left: 2.3vw;
+    padding-top: 7vh;
+    width: 95vw;
+    background-color: #f2f2f2;
+    border-radius: 30px;
+    padding-bottom: 10VH;
+}
+.articles{
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    gap: 2.5vw;
+    
+}
+.article{
+    width: 25vw;
+    height: 52.5vh;
+    background-color: white;
+    margin-top: 2.5vw;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.article.ai{
+    width: 40vw;
+    height: 40.5vh;
+    display: flex;
+    
+}
+.art_el{
+    font-weight: bold;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 22.5px
+}
+.art_para{
+    text-align: center;
+    padding: 0 30px;
+    font-size: 15px
+}
+.im{
+    gap: 4.5vw;
+}
+.logoMenu{
+    width: 7vw;
+    height: 15vh;
+    margin-top: 2.5vh;
+}
+.secArticle{
+    width: 60%;
+}
+.article:hover{
+    transform: scale(1.1);
+    border: solid #693367;
+}
+
+
+
+
+.hero5{
+    width: 100vw;
+    margin-top: 10vh;
+    padding-left: 2.5vw;
+}
+.immDesc{
+    font-size: 1.2rem;
+}
+.imm1{
+    padding-left: 10vh;
+}
+.imm2{
+    display: flex;
+    flex-direction: row;
+
+    padding-right:10vh;
+}
+#drive{
+    color: #693367;
+    font-weight: bold;
+}
+#logoDrive{
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+}
+.imm3{
+    font-size: 1.4rem;
+}
+#canva{
+    border-radius: 20px;
+    width: 10vw;
+    height: 22vh;
+}
+
+
+.footer{
+    margin-top: 10vh;
+    width: 100vw;
+    height: 30vh;
+    background-color: #f2f2f2;
+    padding-left: 6vh;
+}
+.foot{
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-weight: bold;
+}
+.footM{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+}
+.what{
+    width: 30px;
+    height: 30px;
+    margin-top: 20vh;
+}
