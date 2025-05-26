@@ -11,7 +11,7 @@
 
 <div id="boxx">
     <header class="header1">
-        <h1>Dall-E (ChatGPT)</h1>
+        <h1>Gemini (Google)</h1>
         <p>Esplora il set di indici statistici basati sulla collezione di immagini da noi raccolta negli scorsi giorni.</p>
     </header>
 
@@ -20,9 +20,8 @@
     <div class="container">
         <div class="row">
             <div class="col-3 offset-md-1">
-                <div class="b block1">
-                    <h1 class="perc">72% di donne</h1>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <div class="b block1 l">
+                    <img class="logoOA" src="static\media\images\gemini.png" alt="">
                 </div>
             </div>
             <div class="col-7">
@@ -40,8 +39,8 @@
                 </div>
             </div>
             <div class="col-3">
-                <div class=" b block3">
-                    <img src="" alt="">
+                <div class=" b block3 graf">
+                    <div id="graf1" ></div>
                 </div>
             </div>
             <div class="also">
@@ -59,16 +58,16 @@
                 </div>
             </div>
             <div class="col-3">
-                <div class=" b block3">
-                    <img src="" alt="">
+                <div class=" b block3 l">
+                    <img class="logoOA"src="static\media\images\job.png" alt="">
                 </div>
             </div>
 
 
 
             <div class="col-3 offset-md-1">
-                <div class="b block3">
-                    <img src="" alt="">
+                <div class="b block3 graf">
+                    <div id="graf2" ></div>
                 </div>
             </div>
             <div class="col-4">
@@ -99,8 +98,8 @@
                 </div>
             </div>
             <div class="col-3">
-                <div class=" b block3">
-                    <img src="" alt="">
+                <div class=" b block3 l">
+                    <div id="graf3"></div>
                 </div>
             </div>
 
@@ -121,28 +120,28 @@
 
 
 
-            <div class="col-4 offset-md-1">
+            <div class="col-3 offset-md-1">
                 <div class="b block3">
                     <h1 class="perc">72% di donne</h1>
                     <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
             </div>
-            <div class="col-2">
-                <div class=" b block3">
-                    <img src="" alt="">
+            <div class="col-4">
+                <div class=" b block3 l">
+                    <div id="graf4"></div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-3">
                 <div class=" b block3">
                     <h1 class="perc">72% di donne</h1>
                     <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, beatae possimus </p>
                 </div>
             </div>
-            
+            <div class="row footer">
+        
+    </div>
 
         </div>
-        
-
     </div>
 </div>
     
@@ -159,20 +158,94 @@
   }
 </script>
 
-<!--<div class="row footer">
-        <div class="col-4 foot">
-            <p>Ed. Civica -2024/2025</p>
-        </div>
-        <div class="col-2 footM">
-            <p><b>Risorse</b><br>Indagine<br>Dataset<br>Canva Pro<br>Excel</p>
-        </div>
-        <div class="col-2 footM">
-            <p><b>Supporto</b><br>Whatsapp<br>+39 1234567890<br>email.mail@gmail.mail<br>Assistenza</p>
-        </div>
-        <div class="col-1 offset-md-3 what">
-            <a href=""><img src="static\media\images\what.png" alt=""></a>
-        </div>
-    </div>-->
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+
+        //grafico 1
+        var data = [{ x: [1,2,3], y: [2,4,6], type: 'scatter' }];
+        var layout = {
+            title: 'Distribuzione frutta',
+            autosize: true,
+            width: 340,
+            height: 350,
+            plot_bgcolor: '#ffffff',
+            paper_bgcolor: '#f2f2f2'
+        };  
+        Plotly.newPlot('graf1', data, layout);
+
+
+        //grafico2
+        var data = [{
+            type: 'pie',
+            labels: ['Mele', 'Banane', 'Arance', 'Pere'],
+            values: [10, 15, 13, 17],
+            textinfo: 'label+percent',
+            textposition: 'outside',
+            automargin: true
+        }];
+        var layout = {
+            autosize: true,
+            width: 340,
+            height: 350,
+            plot_bgcolor: '#ffffff',
+            paper_bgcolor: '#f2f2f2',
+            title: 'Distribuzione frutta',
+            showlegend: false
+        };
+        Plotly.newPlot('graf2', data, layout);
+
+
+        //grafico 3
+        var data = [{
+            x: [1, 2, 2, 3, 3, 3, 4, 4, 4, 4],  // dati su cui fare l'istogramma
+            type: 'histogram',
+            marker: {
+                color: 'orange'  // colore barre
+            }
+        }];
+        var layout = {
+            autosize: true,
+            width: 340,
+            height: 350,
+            plot_bgcolor: '#ffffff',
+            paper_bgcolor: '#f2f2f2',
+            title: 'Istogramma di esempio',
+            xaxis: {title: 'Valori'},
+            yaxis: {title: 'Frequenza'}
+        };
+        Plotly.newPlot('graf3', data, layout);
+
+
+        //grafico 4
+        var data = [{
+            x: [1, 2, 3, 4, 5],
+            y: [10, 15, 13, 17, 22],
+            mode: 'markers',
+            marker: {
+                size: [40, 60, 80, 60, 40],   // dimensione delle bolle
+                color: [10, 20, 30, 40, 50],  // colore variabile, mappa valori
+                colorscale: 'Viridis',
+                showscale: true,
+                sizemode: 'area'
+            },
+            text: ['A', 'B', 'C', 'D', 'E'],  // tooltip bolle
+            type: 'scatter'
+        }];
+        var layout = {
+            autosize: true,
+            width: 340,
+            height: 350,
+            plot_bgcolor: '#ffffff',
+            paper_bgcolor: '#f2f2f2',
+            title: 'Esempio di Bubble Chart',
+            xaxis: { title: 'Asse X' },
+            yaxis: { title: 'Asse Y' }
+        };
+        Plotly.newPlot('graf4', data, layout);
+
+    </script>
+
     
 </body>
 </html>
