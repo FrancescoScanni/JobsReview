@@ -31,16 +31,18 @@
                 </div>
             </div>
         </div>
+
+        
         <div class="row">
             <div class="col-7 offset-md-1">
                 <div class=" b block3">
-                    <h1 class="perc">72% di donne</h1>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, beatae possimus aspernatur commodi reiciendis necessitatibus ullam ipsa incidunt tempora rerum exercitationem dignissimos. Dignissimos repellendus nesciunt dolorum, unde at quos cumque.</p>
+                    <h1 class="perc secondario">Il Paradosso della Felicità: Quando i Lavori Umili Battono quelli Prestigiosi</h1>
+                    <p class="text">Un’analisi comparativa della percentuale di felicità tra professioni ad alto status e lavori considerati umili rivela un sorprendente paradosso: chi svolge mansioni meno retribuite o prestigiose riporta, in alcuni casi, livelli di felicità superiori rispetto a ruoli di leadership o alta responsabilità.</p>
                 </div>
             </div>
             <div class="col-3">
                 <div class=" b block3 graf">
-                    <div id="graf1" ></div>
+                    <div id="graf1" style="padding-left: 4vw;" ></div>
                 </div>
             </div>
             <div class="also">
@@ -137,9 +139,8 @@
                     <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, beatae possimus </p>
                 </div>
             </div>
-            <div class="row footer">
+
         
-    </div>
 
         </div>
     </div>
@@ -163,18 +164,38 @@
     <script>
 
         //grafico 1
-        var data = [{ x: [1,2,3], y: [2,4,6], type: 'scatter' }];
-        var layout = {
-            title: 'Distribuzione frutta',
-            autosize: true,
-            width: 340,
-            height: 350,
-            plot_bgcolor: '#ffffff',
-            paper_bgcolor: '#f2f2f2'
-        };  
-        Plotly.newPlot('graf1', data, layout);
+        const lavori = [
+    'Architect', 'Lawyer', 'Politician', 'Doctor', 'CEO',
+    'Judge', 'Engineer', 'Janitor', 'Dishwasher',
+    'Fast Food Worker', 'Cashier', 'Teacher', 'Social Worker', 'Housekeeper'
+];
 
+const felicita = [2, 2, 3, 1, 4, 0, 2, 8, 7, 8, 10, 10, 7, 5];
 
+const trace = {
+    x: lavori,
+    y: felicita.map(v => v * 10), // Converti in percentuale
+    type: 'bar',
+    marker: { color: 'steelblue' },
+    width: 0.3 // Barre sottili
+};
+
+const layout = {
+    title: 'Percentuale di Felicità per Professione',
+    yaxis: { title: '% Felice', range: [0, 100] },
+    xaxis: {
+        title: 'Professione',
+    },
+    bargap: 0.9,
+    width: 380,
+    height: 330,
+    plot_bgcolor: '#ffffff',
+    paper_bgcolor: '#f2f2f2',
+};
+
+Plotly.newPlot('graf1', [trace], layout);
+
+/*
         //grafico2
         var data = [{
             type: 'pie',
@@ -243,7 +264,7 @@
             yaxis: { title: 'Asse Y' }
         };
         Plotly.newPlot('graf4', data, layout);
-
+*/
     </script>
 
     

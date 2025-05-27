@@ -89,13 +89,16 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-
-
 .graf{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
     border: 0px;
+}
+
+.secondario{
+    font-weight: bold;
+    font-size: 190%;
+    padding-bottom: 3vh;
 }
