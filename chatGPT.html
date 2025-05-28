@@ -74,14 +74,14 @@
             </div>
             <div class="col-4">
                 <div class=" b block3">
-                    <h1 class="perc">72% di donne</h1>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, beatae possimus aspernatur commodi reiciendis necessitatibus ullam ipsa incidunt tempora rerum exercitationem dignissimos. Dignissimos repellendus nesciunt dolorum, unde at quos cumque.</p>
+                    <h1 class="perc secondario">Giovani vs Anziani: l’età nei Diversi Lavori</h1>
+                    <p class="text secondo">Un rapido sguardo ai dati ci mostra quanto l’età media vari drasticamente da una professione all’altra. Mentre i mestieri meno retribuiti come il Fast Food Worker e il Cashier sono dominati da ventenni, lavori ad alto status come Judge o CEO vedono una forte presenza di over 50.</p>
                 </div>
             </div>
             <div class="col-3">
                 <div class=" b block3">
-                    <h1 class="perc">72% di donne</h1>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h1 class="perc secondario">Cosa si evince?</h1>
+                    <p class="text">Questo grafico mette in evidenza l’invecchiamento delle professioni di potere e la giovinezza spesso imposta nei lavori più umili.</p>
                 </div>
             </div>
 
@@ -163,108 +163,82 @@
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script>
 
-        //grafico 1
         const lavori = [
-    'Architect', 'Lawyer', 'Politician', 'Doctor', 'CEO',
-    'Judge', 'Engineer', 'Janitor', 'Dishwasher',
-    'Fast Food Worker', 'Cashier', 'Teacher', 'Social Worker', 'Housekeeper'
-];
+            'Architect', 'Lawyer', 'Politician', 'Doctor', 'CEO',
+            'Judge', 'Engineer', 'Janitor', 'Dishwasher',
+            'Fast F Worker', 'Cashier', 'Teacher', 'S. Worker', 'Housekeeper'
+        ];
 
-const felicita = [2, 2, 3, 1, 4, 0, 2, 8, 7, 8, 10, 10, 7, 5];
 
-const trace = {
-    x: lavori,
-    y: felicita.map(v => v * 10), // Converti in percentuale
-    type: 'bar',
-    marker: { color: 'steelblue' },
-    width: 0.3 // Barre sottili
-};
 
-const layout = {
-    title: 'Percentuale di Felicità per Professione',
-    yaxis: { title: '% Felice', range: [0, 100] },
-    xaxis: {
-        title: 'Professione',
-    },
-    bargap: 0.9,
-    width: 380,
-    height: 330,
-    plot_bgcolor: '#ffffff',
-    paper_bgcolor: '#f2f2f2',
-};
+        //grafico 1
+        const felicita = [2, 2, 3, 1, 4, 0, 2, 8, 7, 8, 10, 10, 7, 5];
 
-Plotly.newPlot('graf1', [trace], layout);
-
-/*
-        //grafico2
-        var data = [{
-            type: 'pie',
-            labels: ['Mele', 'Banane', 'Arance', 'Pere'],
-            values: [10, 15, 13, 17],
-            textinfo: 'label+percent',
-            textposition: 'outside',
-            automargin: true
-        }];
-        var layout = {
-            autosize: true,
-            width: 340,
-            height: 350,
-            plot_bgcolor: '#ffffff',
-            paper_bgcolor: '#f2f2f2',
-            title: 'Distribuzione frutta',
-            showlegend: false
+        const trace = {
+            x: lavori,
+            y: felicita.map(v => v * 10),
+            type: 'bar',
+            
         };
-        Plotly.newPlot('graf2', data, layout);
 
-
-        //grafico 3
-        var data = [{
-            x: [1, 2, 2, 3, 3, 3, 4, 4, 4, 4],  // dati su cui fare l'istogramma
-            type: 'histogram',
-            marker: {
-                color: 'orange'  // colore barre
-            }
-        }];
-        var layout = {
-            autosize: true,
-            width: 340,
-            height: 350,
-            plot_bgcolor: '#ffffff',
-            paper_bgcolor: '#f2f2f2',
-            title: 'Istogramma di esempio',
-            xaxis: {title: 'Valori'},
-            yaxis: {title: 'Frequenza'}
-        };
-        Plotly.newPlot('graf3', data, layout);
-
-
-        //grafico 4
-        var data = [{
-            x: [1, 2, 3, 4, 5],
-            y: [10, 15, 13, 17, 22],
-            mode: 'markers',
-            marker: {
-                size: [40, 60, 80, 60, 40],   // dimensione delle bolle
-                color: [10, 20, 30, 40, 50],  // colore variabile, mappa valori
-                colorscale: 'Viridis',
-                showscale: true,
-                sizemode: 'area'
+        const layout = {
+            title: 'Percentuale di Felicità per Professione',
+            yaxis: { title: '% Felice', range: [0, 100] },
+            xaxis: {
+                title: 'Professione',
             },
-            text: ['A', 'B', 'C', 'D', 'E'],  // tooltip bolle
-            type: 'scatter'
-        }];
-        var layout = {
-            autosize: true,
-            width: 340,
-            height: 350,
+            bargap: 0.9,
+            width: 380,
+            height: 330,
             plot_bgcolor: '#ffffff',
             paper_bgcolor: '#f2f2f2',
-            title: 'Esempio di Bubble Chart',
-            xaxis: { title: 'Asse X' },
-            yaxis: { title: 'Asse Y' }
         };
-        Plotly.newPlot('graf4', data, layout);
-*/
+
+        Plotly.newPlot('graf1', [trace], layout);
+
+
+
+
+
+        //grafico 2
+        const eta = {
+            '20': [10, 30, 10, 30, 0, 0, 10, 10, 50, 70, 30, 20, 30, 0],
+            '30': [0, 40, 10, 20, 10, 0, 0, 0, 10, 20, 50, 40, 40, 70],
+            '40': [30, 10, 10, 20, 40, 10, 30, 50, 20, 10, 20, 20, 30, 30],
+            '50': [40, 20, 40, 20, 30, 10, 10, 20, 0, 0, 0, 20, 0, 0],
+            '60': [20, 0, 30, 0, 10, 60, 40, 20, 20, 0, 0, 0, 0, 0],
+            '70': [0, 0, 0, 0, 10, 20, 10, 0, 0, 0, 0, 0, 0, 0]
+        };
+
+        const colori = ['#FFB347', '#FF8040', '#FF6347', '#FF3333', '#CC0000', '#800000'];
+
+        const tracce = Object.keys(eta).map((fascia, i) => ({
+            y: lavori,
+            x: eta[fascia],
+            name: `${fascia} anni`,
+            type: 'bar',
+            orientation: 'h',
+            marker: { color: colori[i] }
+        }));
+
+        Plotly.newPlot('graf2', tracce, {
+            title: 'Età stimata nei Diversi Lavori',
+            barmode: 'stack',
+            xaxis: { title: '% per fascia d’età', range: [0, 100] },
+            height: 330,
+            width:350,
+            plot_bgcolor: '#ffffff',
+            paper_bgcolor: '#f2f2f2',
+        });
+
+
+
+
+
+
+
+
+
     </script>
 
     
