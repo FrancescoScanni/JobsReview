@@ -87,19 +87,19 @@
 
             <div class="col-4 offset-md-1">
                 <div class="b block3">
-                    <h1 class="perc">72% di donne</h1>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h1 class="perc secondario">Professioni e Volti: la predomianza Occidentale</h1>
+                    <p class="text">Le immagini generate da AI mostrano una forte <b>predominanza</b> di volti “occidentali” e “orientali” in molte professioni, con scarsissima presenza di persone <b>afrodiscendenti</b>. Questo squilibrio riflette una rappresentazione etnicamente <b>non inclusiva.</b></p>
                 </div>
             </div>
             <div class="col-3">
                 <div class=" b block3">
-                    <h1 class="perc">72% di donne</h1>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, beatae possimus </p>
+                    <h1 class="perc secondario">Un Gemini razzista?</h1>
+                    <p class="text">Gemini <b>non migliora</b> affatto rispetto agli altri modelli. La concentrazione etnica nei diversi lavori non solo è <b>impari</b>, bensì nettamente <b>polarizzata</b>. Si può dunque dire che è razzista?</p>
                 </div>
             </div>
             <div class="col-3">
                 <div class=" b block3 l">
-                    <div id="graf3"></div>
+                    <div id="graf3"c class="g3"></div>
                 </div>
             </div>
 
@@ -218,6 +218,34 @@
         };
         Plotly.newPlot("graf2", datai, layout1, { displayModeBar: false });
 
+
+
+
+        //grafico 3
+
+        const afro = [0, 4.35, 0, 0, 0, 0, 0, 0, 20.0, 0, 0];
+        const eastAsian = [5.26, 4.35, 20.0, 14.29, 21.21, 54.29, 0, 0, 40.0, 0, 0];
+        const western = [21.05, 13.04, 80.0, 85.71, 69.7, 25.71, 86.49, 50.0, 40.0, 25.0, 80.0];
+        const asian = [73.68, 78.26, 0, 0, 9.09, 20.0, 13.51, 50.0, 0, 75.0, 20.0];
+
+        const dataa = [
+            { x: professions, y: afro, name: 'Afrodiscendente', type: 'bar' },
+            { x: professions, y: eastAsian, name: 'Estremo Orientale', type: 'bar' },
+            { x: professions, y: western, name: 'Occidentale', type: 'bar' },
+            { x: professions, y: asian, name: 'Orientale', type: 'bar' }
+        ];
+
+        const layoutt = {
+            barmode: 'stack',
+            xaxis: { tickangle: -45 },
+            yaxis: { title: '%', range: [0, 100] },
+            width: 450,
+            height: 330,
+            plot_bgcolor: '#ffffff',
+            paper_bgcolor: '#f2f2f2',
+        };
+
+        Plotly.newPlot('graf3', dataa, layoutt);
     </script>
 
     

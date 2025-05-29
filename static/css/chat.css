@@ -99,7 +99,7 @@ body {
 .secondario{
     font-weight: bold;
     font-size: 190%;
-    padding-bottom: 2vh;
+    padding-bottom: 0.2vh;
 }
 .secondo{
     margin-bottom: 100px;
@@ -126,4 +126,7 @@ body {
 }
 .g2{
     padding-right: 2vw;
+}
+.g3{
+    padding-left: 6vw;
 }
