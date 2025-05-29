@@ -40,7 +40,7 @@
             </div>
             <div class="col-3">
                 <div class=" b block3 graf">
-                    <div id="graf1" ></div>
+                    <div id="graf1" class="g1" ></div>
                 </div>
             </div>
             <div class="also">
@@ -53,8 +53,8 @@
         <div class="row extra">
             <div class="col-7 offset-md-1">
                 <div class="b block3">
-                    <h1 class="perc">72% di donne</h1>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h1 class="perc secondario">Per Gemini i lavoratori sono felici?...non proprio!</h1>
+                    <p class="text">Un'analisi del dataset di <b>173 immagini generate</b> da Gemini AI rivela un'evidente prevalenza di <b>espressioni neutre</b>, con oltre il <b>72%</b> dei volti classificati come tali. Le emozioni positive come <b>"sorridente" e "felice"</b> sono nettamente meno rappresentate, mentre le espressioni negative o serie sono quasi assenti. Questa distribuzione suggerisce un <b>forte bias</b> verso l’emozione neutra, probabilmente legato a una tendenza dei modelli generativi a minimizzare le <b>espressioni emotive</b>, forse per ragioni di generalizzazione o <b>"sicurezza visiva"</b>.</p>
                 </div>
             </div>
             <div class="col-3">
@@ -67,19 +67,19 @@
 
             <div class="col-3 offset-md-1">
                 <div class="b block3 graf">
-                    <div id="graf2" ></div>
+                    <div id="graf2" class="g2"></div>
                 </div>
             </div>
             <div class="col-4">
                 <div class=" b block3">
-                    <h1 class="perc">72% di donne</h1>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, beatae possimus aspernatur commodi reiciendis necessitatibus ullam ipsa incidunt tempora rerum exercitationem dignissimos. Dignissimos repellendus nesciunt dolorum, unde at quos cumque.</p>
+                    <h1 class="perc secondario">72% è di umore neutro!</h1>
+                    <p class="text">In oltre il <b>70% delle immagini</b> analizzate, l'intelligenza artificiale di Gemini genera volti con <b>espressione neutra</b>. Questo dato suggerisce una tendenza marcata verso la neutralità emozionale, probabilmente scelta dal modello per garantire sicurezza, <b>ambiguità controllata</b> o una forma di universalità estetica.</p>
                 </div>
             </div>
             <div class="col-3">
                 <div class=" b block3">
-                    <h1 class="perc">72% di donne</h1>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h1 class="perc secondario">Solo il 25% è felice!</h1>
+                    <p class="text">Quando Gemini “osa” mostrare emozione, privilegia quella <b>positiva</b>, anche se non è ancora capace di riflettere pienamente la <b>complessità affettiva</b> del volto umano.</p>
                 </div>
             </div>
 
@@ -168,7 +168,6 @@
         ];
 
         //grafico 1
-        
         const percentMale = [84.21, 100, 92.31, 20, 87.80, 100, 0, 100, 83.33, 0, 89.74];
         const percentFemale = percentMale.map(p => 100 - p);
         const data = [
@@ -191,9 +190,33 @@
         barmode: "stack",
         xaxis: { title: "", tickangle: -45 },
         yaxis: { title: "%", range: [0, 100] },
+        width: 420,
+        height: 330,
+        plot_bgcolor: '#ffffff',
+        paper_bgcolor: '#f2f2f2',
         };
-
         Plotly.newPlot("graf1", data, layout, { displayModeBar: false });
+
+
+
+        //grafico 2
+        const labels = ["Neutro", "Felice", "Serio","Triste"];
+        const values = [126, 46, 3,0];
+
+        const datai = [{
+        labels: labels,
+        values: values,
+        type: "pie",
+        textinfo: "label+percent",
+        }];
+        const layout1 = {
+            width: 420,
+            height: 330,
+            plot_bgcolor: '#ffffff',
+            paper_bgcolor: '#f2f2f2',
+            showlegend: true
+        };
+        Plotly.newPlot("graf2", datai, layout1, { displayModeBar: false });
 
     </script>
 
