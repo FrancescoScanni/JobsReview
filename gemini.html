@@ -12,7 +12,7 @@
 <div id="boxx">
     <header class="header1">
         <h1>Gemini (Google)</h1>
-        <p>Esplora il set di indici statistici basati sulla collezione di immagini da noi raccolta negli scorsi giorni.</p>
+        <p>Esplora i grafici ed il set di indici statistici basati sulla collezione di immagini da noi raccolta negli scorsi giorni.</p>
     </header>
 
     <!--Collage-->
@@ -26,16 +26,16 @@
             </div>
             <div class="col-7">
                 <div class=" b block2">
-                    <h1 class="perc">72% di donne</h1>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, beatae possimus aspernatur commodi reiciendis necessitatibus ullam ipsa incidunt tempora rerum exercitationem dignissimos. Dignissimos repellendus nesciunt dolorum, unde at quos cumque.</p>
+                    <h1 class="perc secondario">Come nasce Gemini? - Introduzione</h1>
+                    <p class="text">Gemini, sviluppato da <b>Google DeepMind</b>, è una famiglia di modelli multimodali annunciata nel <b>dicembre 2023</b> come evoluzione dei <b>modelli PaLM</b>. Gemini è stato progettato fin dall'inizio per gestire <b></b>testo, immagini, audio e video, con un'integrazione nativa tra i diversi tipi di dati. A differenza di modelli addestrati separatamente per ogni tipo di input, Gemini è addestrato in modo <b>multimodale</b>, cioè elabora e <b>collega parole, pixel</b> e suoni nello stesso spazio di rappresentazione. Questo gli consente di generare, descrivere e analizzare immagini in modo <b>fluido e coerente</b>.</p>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-7 offset-md-1">
                 <div class=" b block3">
-                    <h1 class="perc">72% di donne</h1>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, beatae possimus aspernatur commodi reiciendis necessitatibus ullam ipsa incidunt tempora rerum exercitationem dignissimos. Dignissimos repellendus nesciunt dolorum, unde at quos cumque.</p>
+                    <h1 class="perc secondario">Anche Gemini vede il lavoro con occhi maschili</h1>
+                    <p class="text">Gemini AI rivela evidenti <b>bias</b> di genere nella rappresentazione visiva di diverse professioni. I ruoli associati a prestigio, autorità o ambito tecnico (come <b>ingegnere, medico, politico</b>) sono raffigurati prevalentemente da figure maschili, mentre le professioni legate alla cura o al <b>lavoro domestico</b> (insegnante, cassiera, domestica) sono dominate da figure femminili. Alcuni ruoli mostrano addirittura una <b>totale assenza di rappresentanza</b> di un genere, sottolineando la persistenza di <b>stereotipi</b> nei dati usati per addestrare i modelli generativi.</p>
                 </div>
             </div>
             <div class="col-3">
@@ -162,87 +162,38 @@
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script>
 
+        const professions = [
+            "Architect", "Politician", "Doctor", "Teacher", "FastFood Worker",
+            "Janitor", "Cashier", "DishWasher", "CEO", "Housekeeper", "Engineer"
+        ];
+
         //grafico 1
-        var data = [{ x: [1,2,3], y: [2,4,6], type: 'scatter' }];
-        var layout = {
-            title: 'Distribuzione frutta',
-            autosize: true,
-            width: 340,
-            height: 350,
-            plot_bgcolor: '#ffffff',
-            paper_bgcolor: '#f2f2f2'
-        };  
-        Plotly.newPlot('graf1', data, layout);
-
-
-        //grafico2
-        var data = [{
-            type: 'pie',
-            labels: ['Mele', 'Banane', 'Arance', 'Pere'],
-            values: [10, 15, 13, 17],
-            textinfo: 'label+percent',
-            textposition: 'outside',
-            automargin: true
-        }];
-        var layout = {
-            autosize: true,
-            width: 340,
-            height: 350,
-            plot_bgcolor: '#ffffff',
-            paper_bgcolor: '#f2f2f2',
-            title: 'Distribuzione frutta',
-            showlegend: false
+        
+        const percentMale = [84.21, 100, 92.31, 20, 87.80, 100, 0, 100, 83.33, 0, 89.74];
+        const percentFemale = percentMale.map(p => 100 - p);
+        const data = [
+        {
+            x: professions,
+            y: percentMale,
+            name: "Maschi",
+            type: "bar",
+            marker: { color: "#4A90E2" }
+        },
+        {
+            x: professions,
+            y: percentFemale,
+            name: "Femmine",
+            type: "bar",
+            marker: { color: "#F78DA7" }
+        }
+        ];
+        const layout = {
+        barmode: "stack",
+        xaxis: { title: "", tickangle: -45 },
+        yaxis: { title: "%", range: [0, 100] },
         };
-        Plotly.newPlot('graf2', data, layout);
 
-
-        //grafico 3
-        var data = [{
-            x: [1, 2, 2, 3, 3, 3, 4, 4, 4, 4],  // dati su cui fare l'istogramma
-            type: 'histogram',
-            marker: {
-                color: 'orange'  // colore barre
-            }
-        }];
-        var layout = {
-            autosize: true,
-            width: 340,
-            height: 350,
-            plot_bgcolor: '#ffffff',
-            paper_bgcolor: '#f2f2f2',
-            title: 'Istogramma di esempio',
-            xaxis: {title: 'Valori'},
-            yaxis: {title: 'Frequenza'}
-        };
-        Plotly.newPlot('graf3', data, layout);
-
-
-        //grafico 4
-        var data = [{
-            x: [1, 2, 3, 4, 5],
-            y: [10, 15, 13, 17, 22],
-            mode: 'markers',
-            marker: {
-                size: [40, 60, 80, 60, 40],   // dimensione delle bolle
-                color: [10, 20, 30, 40, 50],  // colore variabile, mappa valori
-                colorscale: 'Viridis',
-                showscale: true,
-                sizemode: 'area'
-            },
-            text: ['A', 'B', 'C', 'D', 'E'],  // tooltip bolle
-            type: 'scatter'
-        }];
-        var layout = {
-            autosize: true,
-            width: 340,
-            height: 350,
-            plot_bgcolor: '#ffffff',
-            paper_bgcolor: '#f2f2f2',
-            title: 'Esempio di Bubble Chart',
-            xaxis: { title: 'Asse X' },
-            yaxis: { title: 'Asse Y' }
-        };
-        Plotly.newPlot('graf4', data, layout);
+        Plotly.newPlot("graf1", data, layout, { displayModeBar: false });
 
     </script>
 
