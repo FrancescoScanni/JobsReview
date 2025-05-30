@@ -130,3 +130,7 @@ body {
 .g3{
     padding-left: 6vw;
 }
+#pell{
+    border-radius: 10px;
+    border: solid 2px black;
+}
