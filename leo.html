@@ -92,18 +92,18 @@ Al contrario, lavori come medico, architetto, operatore fast food e lavapiatti m
             <div class="col-4 offset-md-1">
                 <div class="b block3">
                     <h1 class="perc secondario">Un piccolo cambiamento...</h1>
-                    <p class="text">L'analisi evidenzia una netta predominanza di individui di etnia occidentale (82%) nelle immagini generate, seguiti da una minor presenza di persone africane (11%) e orientali (7%). Nonostante l'evidente bias, per la prima volta l'<b>etnia africana</b> non è ultima.</p>
+                    <p class="text">L'analisi evidenzia una netta <b>predominanza</b> di individui di etnia occidentale <b>(82%)</b> nelle immagini generate, seguiti da una minor presenza di persone <b>africane (11%) e orientali (7%)</b>. Nonostante l'evidente bias, per la prima volta l'<b>etnia africana</b> non è ultima.</p>
                 </div>
             </div>
             <div class="col-3">
                 <div class=" b block3">
-                    <h1 class="perc">72% di donne</h1>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, beatae possimus </p>
+                    <h1 class="perc secondario">...piccolo...</h1>
+                    <p class="text">Osservando il <b>dataset completo</b> è visibilmente noto che queste perchentuali sono <b>decisamente polarizzate</b>. A differena delle altre AI, Leonardo <b>concentra</b> tutte le etnie nei singoli lavori, senza distribuirle particolarmente.</p>
                 </div>
             </div>
             <div class="col-3">
                 <div class=" b block3 l">
-                    <div id="graf3"></div>
+                    <div id="graf3" class="g4"></div>
                 </div>
             </div>
 
@@ -227,7 +227,6 @@ Una quota del <b>24,4%</b> mantiene un atteggiamento serio, probabilmente legato
 
 
 
-
         //grafico 2
         const dataa = [
             {
@@ -264,11 +263,13 @@ Una quota del <b>24,4%</b> mantiene un atteggiamento serio, probabilmente legato
             textinfo: 'label+percent',
             insidetextorientation: 'radial'
         }];
-
         const layouttt = {
             title: 'Distribuzione etnica secondo Leonardo AI',
+            width: 490,
+            height: 330,
+            plot_bgcolor: '#ffffff',
+            paper_bgcolor: '#f2f2f2',
         };
-
         Plotly.newPlot('graf3', dataaa, layouttt);
         
     </script>

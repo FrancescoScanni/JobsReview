@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative AI - ChatGPT</title>
+    <link rel="stylesheet" href="static\css\chat.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+<body>
+
+<div id="boxx">
+    <header class="header1">
+        <h1>Bilancio generale - cosa emerge?</h1>
+        <p>Consulta il risultato comune delle statistiche analizzate relelative all'analisi dei bias.</p>
+    </header>
+
+    <!--Collage-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3 offset-md-1">
+                <div class="b block1 l">
+                    <img class="gruppo" src="static\media\images\aiGEn.png" alt="">
+                </div>
+            </div>
+            <div class="col-7">
+                <div class=" b block2">
+                    <h1 class="perc secondario"><b>Perché questo esperimento?</b></h1>
+                    <p class="text">Attraverso questo esperimento, abbiamo voluto esplorare in modo critico e creativo le rappresentazioni automatiche del mondo del lavoro, mettendo alla prova diverse intelligenze artificiali.
+Il nostro obiettivo? Capire se esistono bias, stereotipi o tendenze ripetitive nei volti, nei ruoli e nelle emozioni che queste tecnologie associano ai lavoratori.</p>
+                    <p class="text"></p>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <div class="col-7 offset-md-1">
+                <div class=" b block3">
+                    <h1 class="perc secondario">La fonte del materiale di studio</h1>
+                    <p class="text">Abbiamo generato circa 700 immagini, tutte basate sugli stessi ruoli lavorativi, utilizzando cinque diverse AI: DALL-E, Canva, Bing Image Creator, Gemini e Leonardo AI.
+Ogni immagine è stata poi analizzata da gruppi della nostra classe, che hanno ipotizzato: età del soggetto, etnia, colore della pelle (scala da 1 a 6), sesso ed umore espresso
+I dati sono stati raccolti in un foglio Excel per permettere un’analisi complessiva e strutturata.</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class=" b block3 graf l">
+                    <img class="gruppo" src="static\media\images\gruppo.png" alt="">
+                </div>
+            </div>
+            <div class="also">
+                <a onclick="toggleInfo()"><img src="static/media/images/scopri.png" id="arrow"  alt="scopri"></a>
+                <p class="scopriDP">Scopri di più</p>
+            </div>
+        </div>
+
+
+        <div class="row extra">
+            <div class="col-3">
+                <div class=" b block3 l">
+                    <div id="graf1" class="g6"></div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="b block3">
+                    <h1 class="perc secondario">Genere: Come le AI vedono i due sessi a lavoro</h1>
+                    <p class="text">Questa è stata una delle stats più interessanti ed attuali: i <b>generi</b> non vengono distribuiti in modo uniforme.I ruoli tecnici o di potere erano quasi sempre <b>maschili</b>. Le donne erano spesso rappresentate in ruoli di cura o supporto. L’<b>aspetto fisico</b> contava: vestiti eleganti per gli uomini manager, per esempio. <b>Parlando di numeri</b>, in generale, da grafici spiccano Canva e Bing, essendo le uniche con <b>polarizzazione dei sessi</b> apparentemente neutra.</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class=" b block3 l">
+                    <div id="graf1.1" class="g4" ></div>
+                </div>
+            </div>
+
+
+
+            <div class="col-6 ">
+                <div class="b block3">
+                    <h1 class="perc secondario">Età: è davvero collegata col nostro lavoro secondo l'AI?</h1>
+                    <p class="text">le intelligenze artificiali tendono a rappresentare le <b>persone anziane</b> come figure autorevoli e rispettate, mentre i giovani compaiono soprattutto nei ruoli operativi o di basso livello. Tuttavia, l'AI sembr <b>simpatizzare per i più giovani</b> (25-30 anni), essendo le categorie più generate dal punto di vista generale con alla fine, invece, gli <b>ultra-sessantenni</b>.</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class=" b block3 graf l">
+                    <div id="graf2" class="g4" ></div>
+                </div>
+            </div>
+
+
+
+            <div class="col-6">
+                <div class="b block3 graf l">
+                    <div id="graf3"></div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class=" b block3">
+                    <h1 class="perc secondario">Pelle:  si posso definire delle AI "razziste"?</h1>
+                    <p class="text">L’analisi delle immagini generate rivela una <b>forte predominanza di tonalità chiare</b> (tipo I) nella rappresentazione dei lavoratori, con una presenza molto limitata di <b>tonalità scure (IV, V e VI)</b>. In media, oltre il <b>65% dei volti</b> rappresentati da ogni AI appartiene alla categoria I, ovvero pelle molto chiara. Invece, carnagioni più scure sono quasi del tutto marginali, con <b>percentuali spesso sotto il 5%</b>, alle quali vengono attribuiti lavori tutt'altro che dirigenziali. <b>Come mai?...</b></p>
+                </div>
+            </div>
+
+
+
+            <div class="col-6">
+                <div class="b block3">
+                    <h1 class="perc secondario">Triste o felice? Secondo l'AI...</h1>
+                    <p class="text secondo">I gruppi <b>Leonardo AI e Gemini AI</b> generano lavoratori per lo più felici o sorridenti, <b>mentre Dall-E</b> mostra una maggiore varietà emotiva, con una porzione più ampia di espressioni neutre e una percentuale rilevante di emozioni negative (triste o arrabbiato). <b>Canva e Bing</b> si mantengono su profili espressivi bilanciati ma poco variegati, con un netto predominio della felicità. Anche per quanto riguarda i lavora <b>non è presente una polarizzazione eccessiva</b>. Tuttavia, inaspettatamente, quasi tutte le AI associavano lavori umili a volti felici, creando così il <b>paradosso fama/tristezza</b>.</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class=" b block3 graf l">
+                    <div id="graf4"></div>
+                </div>
+            </div>
+
+
+
+            <div class="col-3">
+                <div class="b block3 l graf">
+                    <div id="graf5" class="g6"></div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class=" b block3">
+                    <h1 class="perc secondario">L'AI ama viaggiare? Beh, non proprio...</h1>
+                    <p class="text">Tutti i gruppi mostrano una forte <b>prevalenza di etnia Occidentale</b>, in particolare il Gruppo Leonardo con quasi l'80%. Tuttavia, Dall-E si distingue per una rilevante percentuale di individui <b>Afrodiscendenti (28.57%)</b>.
+Gr. Bing, Gemini AI e Gr. Canva mostrano un <b>certo equilibrio</b> tra Occidentali e Orientali Estesi, con quest’ultima categoria rappresentata tra il 25% e quasi il 38%. In quasi tutti i gruppi, la <b>rappresentanza afrodiscendente rimane bassa</b>, eccetto in ChatGPT.</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class=" b block3 l graf">
+                    <div id="graf5.1" class="g4"></div>
+                </div>
+            </div>
+
+        
+
+        </div>
+    </div>
+</div>
+    
+            
+
+<script>
+    const extra = document.querySelector('.extra');
+    const arrow = document.querySelector('#arrow');
+    arrow.addEventListener("click",toggleInfo())
+    extra.classList.toggle('extra');
+    function toggleInfo() {
+        extra.classList.toggle('extra');
+        arrow.classList.add('visible')
+  }
+</script>
+
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+
+
+        //grafico 1
+        const data = [{
+            values: [64.5, 35.5],
+            labels: ['M', 'F'],
+            type: 'pie',
+            marker: {
+            colors: ['#1f77b4', '#f77ef5']
+            },
+        }];
+        const layout = {
+            title: 'Distribuzione. generi (totale: 707img)',
+            width: 450,
+            height: 350,
+            plot_bgcolor: '#ffffff',
+            paper_bgcolor: '#f2f2f2',
+        };
+        Plotly.newPlot('graf1', data, layout);
+
+
+        //grafico 1.1
+        const gruppi = ['Bing', 'Leonardo', 'ChatGPT', 'Gemini', 'Canva'];
+        const maschi = [43.07, 70.83, 73.33, 82.22, 52.5];
+        const femmine = [56.93, 29.17, 26.67, 17.78, 47.5];
+        const traceMaschi = {
+            x: gruppi,
+            y: maschi,
+            name: 'M%',
+            type: 'bar',
+            marker: { color: '#4a90e2' }
+        };
+        const traceFemmine = {
+            x: gruppi,
+            y: femmine,
+            name: 'F%',
+            type: 'bar',
+            marker: { color: '#f77ef5' }
+        };
+        Plotly.newPlot('graf1.1', [traceMaschi, traceFemmine], {
+            barmode: 'group',
+            yaxis: { range: [0, 100] },
+            width: 480,
+            height: 350,
+            plot_bgcolor: '#ffffff',
+            paper_bgcolor: '#f2f2f2',
+            title: "Distribuzione x AI"
+        });
+
+
+        //grafico 2
+        const eta = ['20', '30', '40', '50', '60', '70', '80'];
+        const occorrenze = [130, 226, 119, 124, 62, 16, 2];
+        const trace = {
+            x: eta,
+            y: occorrenze,
+            type: 'bar',
+            marker: { color: '#6c63ff' }
+        };
+        const layoutt = {
+            yaxis: { title: 'Occorrenz (su 700)' },
+            xaxis: { title: 'Età (anni)' },
+            width: 530,
+            height: 360,
+            plot_bgcolor: '#ffffff',
+            paper_bgcolor: '#f2f2f2',
+            title: "Distribuzione x AI"
+        };
+        Plotly.newPlot('graf2', [trace], layoutt);
+
+
+        //grafico 3
+        const tonoI = [97, 18, 89, 31, 86];
+        const tonoII = [0, 85, 8, 74, 13];
+        const tonoIII = [34, 14, 10, 31, 17];
+        const tonoIV = [0, 3, 14, 37, 4];
+        const tonoV = [0, 1, 5, 3, 3];
+        const tonoVI = [6, 0, 7, 4, 2];
+        const tracce = [
+            { name: 'I', y: tonoI, x: gruppi, type: 'bar' },
+            { name: 'II', y: tonoII, x: gruppi, type: 'bar' },
+            { name: 'III', y: tonoIII, x: gruppi, type: 'bar' },
+            { name: 'IV', y: tonoIV, x: gruppi, type: 'bar' },
+            { name: 'V', y: tonoV, x: gruppi, type: 'bar' },
+            { name: 'VI', y: tonoVI, x: gruppi, type: 'bar' }
+        ];
+        const layouts = {
+            barmode: 'stack',
+            title: 'Tonalità della pelle nei gruppi AI',
+            xaxis: { title: 'Gruppo' },
+            yaxis: { title: 'Numero di immagini' },
+            width: 530,
+            height: 390,
+            paper_bgcolor: 'rgba(0,0,0,0)',
+            plot_bgcolor: 'rgba(0,0,0,0)'
+        };
+        Plotly.newPlot('graf3', tracce, layouts);
+
+
+
+        //grafico 4
+        const felice = [66.67, 87.18, 43.36, 67.81, 68.89];
+        const neutro = [33.33, 12.82, 46.94, 5.31, 31.11];
+        const negativo = [0, 8.55, 15.65, 0, 0];
+        const traccee = [
+            { name: 'Felice', x: gruppi, y: felice, type: 'bar' },
+            { name: 'Neutro', x: gruppi, y: neutro, type: 'bar' },
+            { name: 'Negativo', x: gruppi, y: negativo, type: 'bar' },
+        ];
+        const layouto = {
+            barmode: 'stack',
+            title: 'Umore dei lavoratori generati (in %)',
+            xaxis: { title: 'Gruppo AI' },
+            yaxis: { title: 'Percentuale', range: [0, 100] },
+            paper_bgcolor: 'rgba(0,0,0,0)',
+            plot_bgcolor: 'rgba(0,0,0,0)',
+            width: 530,
+            height: 390,
+        };
+        Plotly.newPlot('graf4', traccee, layouto);
+
+
+
+        //grafico 5
+        const datas = [
+        {
+            x: ['Gr. Bing', 'Gr. Leonardo', 'ChatGPT', 'Gemini AI', 'Gr. Canva'],
+            y: [60.58, 79.17, 67.67, 60.0, 61.67],
+            name: 'Occ.',
+            type: 'bar',
+            marker: { color: '#6a0dad' },
+            width: 0.3
+        },
+        {
+            x: ['Gr. Bing', 'Gr. Leonardo', 'ChatGPT', 'Gemini AI', 'Gr. Canva'],
+            y: [27.74 + 10.22, 7.5, 3.76, 25.56, 23.33],
+            name: 'Ori.',
+            type: 'bar',
+            marker: { color: '#ff4c4c' },
+            width: 0.3
+        },
+        {
+            x: ['Gr. Bing', 'Gr. Leonardo', 'ChatGPT', 'Gemini AI', 'Gr. Canva'],
+            y: [1.46, 13.33, 28.57, 1.11, 5.0],
+            name: 'Afr.',
+            type: 'bar',
+            marker: { color: '#00bfae' },
+            width: 0.3
+        }
+        ];
+        const layoutss = {
+            title: 'Etnie nei dataset generati da AI',
+            barmode: 'stack',
+            yaxis: { title: 'Percentuale (%)' },
+            paper_bgcolor: 'rgba(0,0,0,0)',
+            plot_bgcolor: 'rgba(0,0,0,0)',
+            width: 500,
+            height: 390,
+        };
+        Plotly.newPlot('graf5', datas, layoutss);
+    
+    
+    
+        //grafico 5.1
+        const datac = [{
+            values: [450, 180, 64],
+            labels: ['Occidentale', 'Orientale Estesa', 'Afrodiscendente'],
+            type: 'pie',
+            marker: {
+            colors: ['#6a0dad', '#ff4c4c', '#00bfae']
+            },
+            hole: 0.3
+        }];
+        const layoutc = {
+            title: 'Distribuzione etnica complessiva nei dataset AI',
+            showlegend: true,
+            paper_bgcolor: 'rgba(0,0,0,0)',
+            plot_bgcolor: 'rgba(0,0,0,0)',
+            width: 530,
+            height: 390,
+        };
+        Plotly.newPlot('graf5.1', datac, layoutc);
+    </script>
+</body>
+</html>
