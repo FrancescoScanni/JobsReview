@@ -157,3 +157,13 @@ body {
 .g6{
     margin-right: 10vw;
 }
+.conclusione{
+    height: 52vh;
+    padding-bottom: 2vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    border-radius: 120px;
+}
+.secondoo{
+    font-size: 95%;
+}

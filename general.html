@@ -27,8 +27,8 @@
             <div class="col-7">
                 <div class=" b block2">
                     <h1 class="perc secondario"><b>Perché questo esperimento?</b></h1>
-                    <p class="text">Attraverso questo esperimento, abbiamo voluto esplorare in modo critico e creativo le rappresentazioni automatiche del mondo del lavoro, mettendo alla prova diverse intelligenze artificiali.
-Il nostro obiettivo? Capire se esistono bias, stereotipi o tendenze ripetitive nei volti, nei ruoli e nelle emozioni che queste tecnologie associano ai lavoratori.</p>
+                    <p class="text">Attraverso questo <b>esperimento</b>, abbiamo voluto esplorare in modo critico e creativo le rappresentazioni automatiche del <b>mondo del lavoro</b>, mettendo alla prova diverse <b>intelligenze artificiali</b>.
+Il nostro obiettivo? Capire se esistono <b>bias, stereotipi o tendenze ripetitive</b> nei volti, nei ruoli e nelle emozioni che queste tecnologie associano ai lavoratori. Lanciamoci in questo pseudo-esperimento col fine di trovare anche qualche <b>lato negativo</b> della nostra tanto adorata IA.</p>
                     <p class="text"></p>
                 </div>
             </div>
@@ -39,9 +39,9 @@ Il nostro obiettivo? Capire se esistono bias, stereotipi o tendenze ripetitive n
             <div class="col-7 offset-md-1">
                 <div class=" b block3">
                     <h1 class="perc secondario">La fonte del materiale di studio</h1>
-                    <p class="text">Abbiamo generato circa 700 immagini, tutte basate sugli stessi ruoli lavorativi, utilizzando cinque diverse AI: DALL-E, Canva, Bing Image Creator, Gemini e Leonardo AI.
-Ogni immagine è stata poi analizzata da gruppi della nostra classe, che hanno ipotizzato: età del soggetto, etnia, colore della pelle (scala da 1 a 6), sesso ed umore espresso
-I dati sono stati raccolti in un foglio Excel per permettere un’analisi complessiva e strutturata.</p>
+                    <p class="text">Abbiamo generato <b>circa 700 immagini</b>, tutte basate sugli stessi ruoli lavorativi, utilizzando cinque diverse AI: <b>DALL-E, Canva, Bing Image Creator, Gemini e Leonardo AI</b>.
+Ogni immagine è stata poi analizzata da gruppi della nostra classe, che hanno ipotizzato: <b>età del soggetto, etnia, colore della pelle (scala da 1 a 6), sesso ed umore espresso</b>
+I dati sono stati raccolti in un foglio <b>Excel</b> per permettere un’<b>analisi complessiva e strutturata</b>.</p>
                 </div>
             </div>
             <div class="col-3">
@@ -136,7 +136,19 @@ Gr. Bing, Gemini AI e Gr. Canva mostrano un <b>certo equilibrio</b> tra Occident
                 </div>
             </div>
 
-        
+
+            <img src="static\media\images\line.png">
+
+
+
+            <div class="col-10 offset-md-1">
+                <div class="b block3 conclusione">
+                    <h1 style="text-align: center;" class="perc secondario">Commento</h1>
+                    <p class="text secondoo">L’esperimento condotto mette in luce come i modelli di <b>intelligenza artificiale generativa</b>, nonostante l’apparente neutralità algoritmica, riflettano e amplifichino <b>bias preesistenti</b>. L’analisi ha evidenziato che le immagini prodotte non distribuiscono in modo equilibrato le caratteristiche rappresentate (<b>etnia, genere, tratti somatici come la pelle, età ed umore</b>).  Relazionando, poi, il tutto interamente al mondo del <b>lavoro</b> si è fatto sì che si aggiungesse una "variabile" da analizzare nel corso di questo vero e proprio esperimento. La scelta delle professioni, inoltre, è studiata proprio per <b>"stuzzicare"</b> l'AI in modo da portare allo scoperto i bias per poi, di conseguenza, studiare meglio il fenomeno.</p>
+                    <h1 style="text-align: center;" class="perc secondario">Conclusione</h1>
+                    <p class="text secondoo">Infine, pur trattandosi di <b>calcoli grezzi</b> (molti dataset erano, infatti, disomogenei/incompleti... per svariati motivi, tra cui quello della <b>limitazione</b> nella generazione gratuita su alcune piattaforme), è stato possibile, a grandi linee, <b>verificare</b> ciò che si era ipotizzato prima ancora di iniziare: i modelli generativi non sono “neutri”, ma riflessi delle scelte, dei dati e delle culture che li hanno formati. Riteniamo, dunque fondamentale che lo sviluppo di queste tecnologie sia accompagnato da <b>sistemi di valutazione</b> e rilevamento bias in fase di test e da strumenti che permettano agli utenti di <b>controllare e correggere potenziali distorsioni</b>.</p>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -224,7 +236,6 @@ Gr. Bing, Gemini AI e Gr. Canva mostrano un <b>certo equilibrio</b> tra Occident
             height: 360,
             plot_bgcolor: '#ffffff',
             paper_bgcolor: '#f2f2f2',
-            title: "Distribuzione x AI"
         };
         Plotly.newPlot('graf2', [trace], layoutt);
 
@@ -309,7 +320,7 @@ Gr. Bing, Gemini AI e Gr. Canva mostrano un <b>certo equilibrio</b> tra Occident
         }
         ];
         const layoutss = {
-            title: 'Etnie nei dataset generati da AI',
+
             barmode: 'stack',
             yaxis: { title: 'Percentuale (%)' },
             paper_bgcolor: 'rgba(0,0,0,0)',
@@ -332,7 +343,7 @@ Gr. Bing, Gemini AI e Gr. Canva mostrano un <b>certo equilibrio</b> tra Occident
             hole: 0.3
         }];
         const layoutc = {
-            title: 'Distribuzione etnica complessiva nei dataset AI',
+
             showlegend: true,
             paper_bgcolor: 'rgba(0,0,0,0)',
             plot_bgcolor: 'rgba(0,0,0,0)',
