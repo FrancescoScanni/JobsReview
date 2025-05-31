@@ -139,3 +139,14 @@ body {
     border: solid 4px black;
     margin-left: 6vw;
 }
+.g4{
+    padding-left: 8vw;
+}
+.hmr{
+    border: black 3px solid;
+    border-radius: 10px;
+    margin-left: 4vw;
+}
+.g5{
+    padding-right: 5vw;
+}
