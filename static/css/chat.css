@@ -103,7 +103,7 @@ body {
 }
 .secondo{
     margin-bottom: 100px;
-    font-size: 100%;
+    font-size: 110%;
 }
 #etnic{
     border: 1px solid black;
@@ -133,4 +133,9 @@ body {
 #pell{
     border-radius: 10px;
     border: solid 2px black;
+}
+#bb{
+    border-radius: 10px;
+    border: solid 4px black;
+    margin-left: 6vw;
 }
